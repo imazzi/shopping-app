@@ -1,0 +1,17 @@
+<p>panier works!</p>
+
+
+<table class="table">
+ 
+    <tbody  >
+      <tr *ngFor="let produit of produits">
+        <th scope="row">{{produit.prix}} </th>
+        <td><button (click)="plus()">+</button>{{qteCount}}<button (click)="minus()">-</button> </td>
+        <td><button >Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">TOTAL</th>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>

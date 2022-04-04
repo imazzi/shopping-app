@@ -1,0 +1,12 @@
+
+  <div class="flex-container">
+    <div class="card" style="width: 18rem;">
+      <img  src="{{productItem.imageUrl}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{productItem.description}}</h5>
+        <h1 class="card-text">{{productItem.prix}} MAD</h1>
+        <button  class="btn btn-primary" (click)="ajouterAuPanier(productItem)">Ajouter Au Panier </button>
+      </div>
+    </div>
+  </div>
+  
