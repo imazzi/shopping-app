@@ -18,6 +18,7 @@ export class PanierComponent implements OnInit {
 
   produits: Produit[] =  this.panierService.getProduits();
   qteCount = 1
+  total=0
 
   getProduits(): void {
     console.log(this.produits)
@@ -33,7 +34,7 @@ export class PanierComponent implements OnInit {
     console.log(this.qteCount)
   }
 
-  total(){
-    
+  sum(){
+    return this.total=this.panierService.getProduits().reduce((acc,val) => acc + val.prix*val.qte, 0)
   }
 }
